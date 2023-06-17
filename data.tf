@@ -6,12 +6,6 @@ data "aws_vpc" "main" {
     }
 }
 
-data "aws_subnet_ids" "main" {
-    vpc_id = data.aws_vpc.main.id
-    tags = {
-        Name = "vpc-${terraform.workspace}-${var.subnet_tier}-${var.az}"
-    }
-}
 
 data "aws_ami" "ubuntu" {
   most_recent = true
