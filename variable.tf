@@ -18,3 +18,10 @@ variable "ingress_ports" {
   default     = []
   description = "Lista de portas a serem liberadas"
 }
+
+variable "instance_type" {
+  type = string
+  default = "t2.micro"
+  description = "Tipo de imagem"
+
+}
