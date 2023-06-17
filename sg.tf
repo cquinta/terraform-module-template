@@ -5,9 +5,6 @@ data "aws_security_group" "default" {
     values = ["default"] 
   }
 
-  tags = {
-    produto   = "default"
-  }
 }
 
 resource "aws_security_group" "optional" {
