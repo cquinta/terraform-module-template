@@ -1,12 +1,3 @@
-data "aws_vpc" "main" {
-    state = "available"
-    filter {
-        name = "tag:Environment"
-        values = ["${terraform.workspace}"]
-    }
-}
-
-
 data "aws_ami" "ubuntu" {
   most_recent = true
 
