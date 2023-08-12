@@ -1,4 +1,4 @@
-resource "aws_instance" "web" {
+resource "aws_instance" "vm" {
   
   ami           = data.aws_ami.ubuntu.id
   instance_type = var.instance_type
@@ -9,7 +9,7 @@ resource "aws_instance" "web" {
 }
 
 resource "aws_eip" "publicip" {
-  instance = aws_instance.web.id
+  instance = aws_instance.vm.id
   count   = var.ip_publico == "yes" ? 1 : 0
 
   
