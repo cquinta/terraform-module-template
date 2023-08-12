@@ -1,7 +1,7 @@
 output "ip_address" {
-  value = "${aws_instance.web[*].public_ip}"
+  value = "${aws_instance.vm[*].public_ip}"
 }
 
 output "elastic_ip_address" {
-  value = "${aws_public_ip.publicip[*].public_ip}"
+  value = "${aws_eip.publicip[*].public_ip}"
 }
