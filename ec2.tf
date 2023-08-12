@@ -7,11 +7,10 @@ resource "aws_instance" "web" {
   user_data = file(var.user_data_file)
   eip = var.ip_publico == "yes" ? aws_eip.eip.id : null
 
-  resource "aws_eip_association" "eip_association" {
+}
+resource "aws_eip_association" "eip_association" {
   instance_id = aws_instance.instance.id
   eip = aws_eip.eip.id
-}
-
   tags = {
     Name = var.name
   }
