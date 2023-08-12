@@ -30,3 +30,8 @@ variable "chave" {
   type = string
   default = "mtckey"
 }
+
+variable "user_data_file" {
+  type = string
+  default = "script.sh"
+}
