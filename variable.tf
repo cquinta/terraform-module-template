@@ -35,3 +35,8 @@ variable "user_data_file" {
   type = string
   default = "script.sh"
 }
+
+variable "ip_publico" {
+  type = string
+  default = "no"
+}
