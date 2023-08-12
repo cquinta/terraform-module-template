@@ -10,7 +10,7 @@ resource "aws_instance" "web" {
 
 resource "aws_eip" "publicip" {
   instance = aws_instance.web.id
-  count   = var.public_ip == "yes" ? 1 : 0
+  count   = var.ip_publico == "yes" ? 1 : 0
 
   
 }
