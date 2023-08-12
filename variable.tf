@@ -40,3 +40,8 @@ variable "ip_publico" {
   type = string
   default = "no"
 }
+
+variable "userdata" {
+  type = string
+  default = "no"
+}
