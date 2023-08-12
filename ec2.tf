@@ -9,12 +9,7 @@ resource "aws_instance" "web" {
     eip = aws_eip.eip.id
   }
 }
-resource "aws_eip_association" "eip_association" {
-  instance_id = aws_instance.instance.id
-  eip = aws_eip.eip.id
-  tags = {
-    Name = var.name
-  }
-}
+
+
 
 
